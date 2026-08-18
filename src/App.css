@@ -1,0 +1,366 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  background: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+.header h1 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.header p {
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+.call-container {
+  width: 90%;
+  max-width: 600px;
+  margin-top: 50px;
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.ai-avatar {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border-radius: 50%;
+  background: #e0e7ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+}
+
+.call-container h2 {
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+.status {
+  margin: 15px 0 25px;
+  color: #666;
+}
+
+.start-btn,
+.end-btn {
+  border: none;
+  padding: 14px 30px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+}
+
+.start-btn {
+  background: #16a34a;
+}
+
+.start-btn:hover {
+  background: #15803d;
+}
+
+.end-btn {
+  background: #dc2626;
+  margin-top: 25px;
+}
+
+.end-btn:hover {
+  background: #b91c1c;
+}
+
+.conversation {
+  margin-top: 25px;
+}
+
+.message {
+  padding: 15px;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.ai-message {
+  background: #eef2ff;
+}
+
+.ai-message p {
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+.listening {
+  margin-top: 25px;
+  padding: 15px;
+  background: #fef3c7;
+  border-radius: 10px;
+  color: #92400e;
+}
+.recording-section {
+  margin-top: 25px;
+}
+
+.record-btn,
+.stop-btn {
+  border: none;
+  padding: 14px 25px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+}
+
+.record-btn {
+  background: #2563eb;
+}
+
+.record-btn:hover {
+  background: #1d4ed8;
+}
+
+.stop-btn {
+  background: #f59e0b;
+}
+
+.stop-btn:hover {
+  background: #d97706;
+}
+
+.audio-preview {
+  margin-top: 25px;
+  padding: 15px;
+  background: #f3f4f6;
+  border-radius: 10px;
+}
+
+.audio-preview p {
+  margin-bottom: 10px;
+}
+
+.audio-preview audio {
+  width: 100%;
+}
+.user-message {
+  margin-top: 20px;
+  background: #dcfce7;
+  text-align: left;
+}
+
+.user-message p {
+  margin-top: 8px;
+  line-height: 1.5;
+}
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.input-section input {
+  flex: 1;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+.send-btn {
+  border: none;
+  padding: 14px 22px;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.send-btn:hover {
+  background: #1d4ed8;
+}
+
+.send-btn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.response {
+  margin-top: 20px;
+}
+.conversation {
+  width: 100%;
+}
+
+.user-message {
+  background: #dcfce7;
+  text-align: left;
+  margin-top: 15px;
+}
+
+.user-message p {
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+.ai-message {
+  text-align: left;
+}
+
+.message {
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.message p {
+  margin-bottom: 0;
+}
+
+.voice-btn {
+  border: none;
+  padding: 14px 18px;
+  border-radius: 10px;
+  background: #16a34a;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.voice-btn:hover {
+  background: #15803d;
+}
+
+.voice-btn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.speaking {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  background: #fef3c7;
+}
+
+.speaking button {
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.call-status {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.listening {
+  margin: 10px 0;
+  padding: 10px;
+  background: #dcfce7;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.call-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.start-call-btn,
+.end-call-btn {
+  border: none;
+  padding: 14px 25px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+}
+
+.start-call-btn {
+  background: #16a34a;
+}
+
+.start-call-btn:hover {
+  background: #15803d;
+}
+
+.end-call-btn {
+  background: #dc2626;
+}
+
+.end-call-btn:hover {
+  background: #b91c1c;
+}
+
+.download-report-section {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.download-report-btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.download-report-btn:hover {
+    transform: translateY(-1px);
+}
+
+.language-status {
+    margin: 10px 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.download-report-section {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.download-report-btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.download-report-btn:hover {
+    transform: translateY(-1px);
+}
